@@ -1,0 +1,64 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# testing
+/coverage
+
+# production
+/build
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+# Logs
+logs/
+*.log
+
+# dotenv environment variables file
+.env
+
+# Virtual environment folder
+venv/
+
+# IDEs and editors
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# build directory
+build/
+
+# React specific files
+.env.local
+.env.development.local
+.env.test.local
+
+.env.production.local
+
+
+API.py
+*.pdf
+*.xlsx
+*.png
+*.docx
+JSONformater.py
+Excelformater.py
+get-pip.py
+interface.py
+tests.py
+/__pycache__
