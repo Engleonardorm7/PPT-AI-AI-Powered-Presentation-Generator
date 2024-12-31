@@ -608,44 +608,6 @@ api = PresentationAPI('presentation.pptx')
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # # Create title slide
 # api.create_slide(layout='title')
 
