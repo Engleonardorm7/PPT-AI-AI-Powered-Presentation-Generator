@@ -2,7 +2,8 @@ from pptx import Presentation
 from pptx.util import Inches, Pt
 from pptx.enum.text import PP_ALIGN
 from pptx.dml.color import RGBColor
-from imagegen import generate_image
+#from imagegen import generate_image
+from luisImageGen import generate_image
 from pptx.shapes.picture import Picture
 
 
@@ -75,46 +76,92 @@ class PresentationAPI:
         return self.current_slide
 
     def add_text(self, text, title_placeholder_num=0, content_placeholder_num=1):
-        """Add non-bullet text to the current slide.
+        # """Add non-bullet text to the current slide.
 
-        Args:
-            text (str): The text to add.
-            title_placeholder_num (int): The index of the title placeholder (default is 0).
-            content_placeholder_num (int): The index of the content placeholder (default is 1).
-        """
-        slide = self.prs.slides[self.current_slide]  # Use the current slide index
+        # Args:
+        #     text (str): The text to add.
+        #     title_placeholder_num (int): The index of the title placeholder (default is 0).
+        #     content_placeholder_num (int): The index of the content placeholder (default is 1).
+        # """
+        # slide = self.prs.slides[self.current_slide]  # Use the current slide index
 
-        if title_placeholder_num < len(slide.placeholders):
-            title_placeholder = slide.placeholders[title_placeholder_num]
-            top_position = title_placeholder.top + title_placeholder.height
-        else:
-            # Posición alternativa si el placeholder de título no está disponible
-            top_position = Pt(100)  # Puedes ajustar esta posición según tus necesidades
+        # if title_placeholder_num < len(slide.placeholders):
+        #     title_placeholder = slide.placeholders[title_placeholder_num]
+        #     top_position = title_placeholder.top + title_placeholder.height
+        # else:
+        #     # Posición alternativa si el placeholder de título no está disponible
+        #     top_position = Pt(100)  # Puedes ajustar esta posición según tus necesidades
 
-        # Intentar obtener el placeholder de contenido
-        if content_placeholder_num < len(slide.placeholders):
-            content_placeholder = slide.placeholders[content_placeholder_num]
-            left = content_placeholder.left
-            width = content_placeholder.width
-            height = content_placeholder.height
+        # # Intentar obtener el placeholder de contenido
+        # if content_placeholder_num < len(slide.placeholders):
+        #     content_placeholder = slide.placeholders[content_placeholder_num]
+        #     left = content_placeholder.left
+        #     width = content_placeholder.width
+        #     height = content_placeholder.height
             
-        else:
-            # Posición y tamaño alternativos si el placeholder de contenido no está disponible
-            left = Pt(100)
-            width = Pt(400)
-            height = Pt(300)
+        # else:
+        #     # Posición y tamaño alternativos si el placeholder de contenido no está disponible
+        #     left = Pt(100)
+        #     width = Pt(400)
+        #     height = Pt(300)
         
-        textbox = slide.shapes.add_textbox(left, top_position, width, height)  # Ajusta la altura según tus necesidades
-        text_frame = textbox.text_frame
-        text_frame.word_wrap=True
+        # textbox = slide.shapes.add_textbox(left, top_position, width, height)  # Ajusta la altura según tus necesidades
+        # text_frame = textbox.text_frame
+        # text_frame.word_wrap=True
 
-        p = text_frame.add_paragraph()
-        p.text = text
-        p.font.size = Pt(32)
-        p.alignment = PP_ALIGN.CENTER
+        # p = text_frame.add_paragraph()
+        # p.text = text
+        # p.font.size = Pt(32)
+        # p.alignment = PP_ALIGN.CENTER
 
-        self.save_presentation()
+        # self.save_presentation()
+
+        slide = self.prs.slides[self.current_slide]
     
+        try:
+            # Obtener el placeholder de contenido y agregar el texto
+            content_placeholder = slide.placeholders[content_placeholder_num]
+            text_frame = content_placeholder.text_frame
+            text_frame.clear()  # Limpiar contenido previo
+            text_frame.word_wrap = True
+            
+            p = text_frame.add_paragraph()
+            p.text = text
+            p.font.size = Pt(32)
+            p.alignment = PP_ALIGN.CENTER
+            
+            self.save_presentation()
+            
+        except Exception as e:
+            print(f"Error adding text to placeholder: {str(e)}")
+
+
+
+
+
+
+    
+    # def add_bullet_points(self, slide_num, points, placeholder=1):
+    #     """Add bullet points to a slide.
+
+    #     Args:
+    #         slide_num (int): The slide number to add bullet points to.
+    #         points (list): A list of strings representing the bullet points.
+    #         placeholder (int): The index of the placeholder for bullet points (default is 1).
+    #     """
+    #     if slide_num > len(self.prs.slides) or slide_num < 1:
+    #         print(f"Error: slide {slide_num} does not exist.")
+    #         return
+    #     slide = self.prs.slides[slide_num]
+    #     text_frame = slide.placeholders[placeholder].text_frame
+    #     text_frame.clear()  # Clear previous content
+
+    #     for point in points:
+    #         p = text_frame.add_paragraph()  # Add a new paragraph
+    #         p.text = point
+    #         p.level = 0  # Set bullet level
+    #     self.save_presentation()
+
     def add_bullet_points(self, slide_num, points, placeholder=1):
         """Add bullet points to a slide.
 
@@ -130,11 +177,26 @@ class PresentationAPI:
         text_frame = slide.placeholders[placeholder].text_frame
         text_frame.clear()  # Clear previous content
 
-        for point in points:
-            p = text_frame.add_paragraph()  # Add a new paragraph
-            p.text = point
-            p.level = 0  # Set bullet level
+        for point_str in points:
+            
+            if '(' in point_str and ')' in point_str and ',' in point_str:
+            
+                last_comma = point_str.rindex(',')
+                text = point_str[1:last_comma].strip()  # El [1:] remueve el primer paréntesis
+                #print(text)
+                level = int(point_str[last_comma + 1:-1].strip())
+                
+            else:
+                text = point_str
+                level = 0
+            p = text_frame.add_paragraph()
+            p.text = text
+            p.level = level # Set bullet level
         self.save_presentation()
+
+
+
+
 
     def edit_text(self, slide_num, placeholder, new_text, paragraph_index=0):#creates a * to the left
         """Edit existing text in a slide's placeholder.
@@ -326,3 +388,21 @@ class PresentationAPI:
 # Example usage
 api = PresentationAPI('presentation.pptx')
 
+# points = [
+#     ('Fastest mode of transportation for long distances', 0),
+#     ('Reduces travel time significantly', 1),
+#     ('Connects remote and inaccessible areas', 0),
+#     ('Enables access to islands and mountainous regions', 1),
+#     ('Efficient for international travel', 0),
+#     ('Supports global mobility for businesses and individuals', 1),
+#     ('High safety standards compared to other modes of transport', 0),
+#     ('Advanced technology and strict regulations ensure safety', 1),
+#     ('Supports global trade and tourism', 0),
+#     ('Facilitates the export and import of goods', 1),
+#     ('Boosts local economies through tourism', 2)
+# ]
+
+
+
+# # Llamar a la función de agregar bullet points
+# api.add_bullet_points(api.get_current_slide(), points=points, placeholder=1)
