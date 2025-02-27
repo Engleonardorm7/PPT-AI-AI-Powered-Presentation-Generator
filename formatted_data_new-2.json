@@ -167,6 +167,441 @@
     },
     {
       "text": "<|im_start|>human\nAdd a conclusion slide summarizing the mysteries of the universe.<|im_end|>\n<|im_start|>assistant\nHappy to help, let me handle this.\n\n<tool_call>\napi.create_slide(layout='title and content', title='Conclusion', content='The universe is a vast and complex system, full of mysteries yet to be unraveled. From the smallest particles to the largest cosmic structures, it invites us to explore and discover.')\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nCreate a title slide with the title 'Social Inequality' and add a subtitle 'Understanding its Causes and Effects'.<|im_end|>\n<|im_start|>assistant\nRight away, let me help you with that.\n\n<tool_call>\napi.create_slide(layout='title', title='Social Inequality', subtitle='Understanding its Causes and Effects')\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nCreate a new slide with the title 'What is Social Inequality?' and content 'Social inequality refers to the unequal distribution of resources, opportunities, and privileges among people in a society.'<|im_end|>\n<|im_start|>assistant\nOf course! I'll get started immediately.\n\n<tool_call>\napi.create_slide(layout='title and content', title='What is Social Inequality?', content='Social inequality refers to the unequal distribution of resources, opportunities, and privileges among people in a society.')\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nChange the content of slide 2 to bullets to: 'Economic disparity', 'Educational inequality', 'Access to healthcare'.<|im_end|>\n<|im_start|>assistant\nSure thing, let me handle that for you.\n\n<tool_call>\napi.add_bullet_points(2-1, placeholder=1, points=['Economic disparity', 'Educational inequality', 'Access to healthcare'])\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nCreate a slide titled 'Causes of Social Inequality' with the content 'Discrimination, economic policies, and lack of education.'<|im_end|>\n<|im_start|>assistant\nGot it, adding the requested slide now.\n\n<tool_call>\napi.create_slide(layout='title and content', title='Causes of Social Inequality', content='Discrimination, economic policies, and lack of education.')\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nAdd an image of a diverse group of people to slide 3.<|im_end|>\n<|im_start|>assistant\nOn it! Adding the requested image now.\n\n<tool_call>\napi.add_image(3-1, 'diverse group of people')\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nCreate a slide with the title 'Effects of Social Inequality' and add bullet points: 'Increased poverty rates', 'Limited social mobility', 'Widening wealth gaps'.<|im_end|>\n<|im_start|>assistant\nRight away, let me create that for you.\n\n<tool_call>\napi.create_slide(layout='title and content', title='Effects of Social Inequality', content='')\napi.add_bullet_points(api.get_current_slide(), placeholder=1, points=['Increased poverty rates', 'Limited social mobility', 'Widening wealth gaps'])\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nReplace the image on slide 3 with an image of a scale representing justice.<|im_end|>\n<|im_start|>assistant\nOf course! I'll get started immediately.\n\n<tool_call>\napi.delete_images(3-1)\napi.add_image(3-1, 'scale representing justice')\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nCreate a slide titled 'Solutions to Social Inequality' with content 'Promoting equal opportunities, enforcing anti-discrimination laws, and increasing access to education.'<|im_end|>\n<|im_start|>assistant\nUnderstood, adding the slide now.\n\n<tool_call>\napi.create_slide(layout='title and content', title='Solutions to Social Inequality', content='Promoting equal opportunities, enforcing anti-discrimination laws, and increasing access to education.')\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nCreate a conclusion slide with the title 'Addressing Social Inequality' and content 'Achieving social equality requires a collective effort to create a more inclusive and fair society.'<|im_end|>\n<|im_start|>assistant\nAdding the conclusion slide for you now.\n\n<tool_call>\napi.create_slide(layout='title and content', title='Addressing Social Inequality', content='Achieving social equality requires a collective effort to create a more inclusive and fair society.')\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nCreate a title slide with the title 'Globalization' and add a subtitle.<|im_end|>\n<|im_start|>assistant\nRight away, let me help you with that.\n\n<tool_call>\napi.create_slide(layout='title', title='Globalization', subtitle='The Impact on the World Economy.')\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nCreate a new slide with the title 'Introduction to Globalization' and content 'An overview of globalization and its effects on countries worldwide.'<|im_end|>\n<|im_start|>assistant\nGot it, working on that now.\n\n<tool_call>\napi.create_slide(layout='title and content', title='Introduction to Globalization', content='An overview of globalization and its effects on countries worldwide.')\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nCreate a new slide with the title 'Economic Impact' and content 'Globalization has led to increased trade, economic growth, and the spread of technology.'<|im_end|>\n<|im_start|>assistant\nCertainly, I'm here to assist you.\n\n<tool_call>\napi.create_slide(layout='title and content', title='Economic Impact', content='Globalization has led to increased trade, economic growth, and the spread of technology.')\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nCreate a slide about 'Cultural Impact' with content 'Globalization has influenced culture, leading to the exchange of ideas, art, and traditions.'<|im_end|>\n<|im_start|>assistant\nI'm on it, let me assist.\n\n<tool_call>\napi.create_slide(layout='title and content', title='Cultural Impact', content='Globalization has influenced culture, leading to the exchange of ideas, art, and traditions.')\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nAdd an image slide with a photo depicting global trade.<|im_end|>\n<|im_start|>assistant\nHere's how I can assist you.\n\n<tool_call>\napi.create_slide(layout='picture with caption', title='Global Trade', content='A photo showing global trade in action.')\napi.add_picture_with_caption(api.get_current_slide(), 'global trade photo','Global Trade','A photo showing global trade in action.')\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nCreate a slide titled 'Challenges of Globalization' and include content 'Economic disparity, environmental impact, and cultural homogenization are some of the challenges.'<|im_end|>\n<|im_start|>assistant\nSure thing, let me sort this out for you.\n\n<tool_call>\napi.create_slide(layout='title and content', title='Challenges of Globalization', content='Economic disparity, environmental impact, and cultural homogenization are some of the challenges.')\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nCreate a conclusion slide with the title 'Conclusion' and content 'Globalization has both positive and negative effects, and it will continue to shape the future.'<|im_end|>\n<|im_start|>assistant\nGot it! Let me take care of this.\n\n<tool_call>\napi.create_slide(layout='title and content', title='Conclusion', content='Globalization has both positive and negative effects, and it will continue to shape the future.')\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nCreate a title slide for a presentation about Multiculturalism.<|im_end|>\n<|im_start|>assistant\nRight away, let me help you with that.\n\n<tool_call>\napi.create_slide(layout='title', title='Multiculturalism', subtitle='The blending of diverse cultures.')\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nCreate a slide about 'Introduction' explaining the concept of multiculturalism.<|im_end|>\n<|im_start|>assistant\nGot it, working on that now.\n\n<tool_call>\napi.create_slide(layout='title and content', title='Introduction', content='Multiculturalism refers to the coexistence of diverse cultural groups within a society.')\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nCreate a slide about 'Cultural Exchange' explaining the impact of globalization on cultural exchange.<|im_end|>\n<|im_start|>assistant\nI'll help you with that.\n\n<tool_call>\napi.create_slide(layout='title and content', title='Cultural Exchange', content='Globalization has facilitated the exchange of ideas, traditions, and customs across borders.')\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nAdd an image slide about cultural diversity in urban spaces.<|im_end|>\n<|im_start|>assistant\nHere's how I can assist you.\n\n<tool_call>\napi.create_slide(layout='picture with caption', title='Cultural Diversity in Urban Spaces', content='A photo showing cultural diversity in a city setting.')\napi.add_picture_with_caption(api.get_current_slide(), 'cultural diversity in cities','Cultural Diversity in Urban Spaces','A photo showing cultural diversity in a city setting.')\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nCreate a slide about 'Challenges of Multiculturalism' highlighting the difficulties societies face with multicultural integration.<|im_end|>\n<|im_start|>assistant\nSure thing, let me sort this out for you.\n\n<tool_call>\napi.create_slide(layout='title and content', title='Challenges of Multiculturalism', content='Multiculturalism can bring challenges in terms of social integration, communication barriers, and cultural misunderstandings.')\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nCreate a slide about 'Key Benefits of Multiculturalism' and explain its advantages.<|im_end|>\n<|im_start|>assistant\nOf course! I'll get started immediately.\n\n<tool_call>\napi.create_slide(layout='title and content', title='Key Benefits of Multiculturalism', content='Multiculturalism promotes innovation, understanding, and mutual respect in society.')\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nAdd a conclusion slide summarizing the main points of multiculturalism.<|im_end|>\n<|im_start|>assistant\nGot it! Let me take care of this.\n\n<tool_call>\napi.create_slide(layout='title and content', title='Conclusion', content='In conclusion, multiculturalism enriches societies and creates opportunities for collaboration and growth.')\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nCreate a title slide for a presentation about Mental Health.<|im_end|>\n<|im_start|>assistant\nCertainly! I'll create that for you.\n\n<tool_call>\napi.create_slide(layout='title', title='Mental Health', subtitle='Understanding and managing mental health.')\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nCreate a slide about 'Introduction to Mental Health' explaining the importance of mental health and its impact on overall well-being in bullet points.<|im_end|>\n<|im_start|>assistant\nI'll assist with that.\n\n<tool_call>\napi.create_slide(layout='title and content', title='Introduction to Mental Health', content='')\napi.add_bullet_points(api.get_current_slide(), points=['Mental health is essential for overall well-being. It affects how we think, feel, and act.','Mental health impacts relationships.','Mental health influences physical health.', 'Mental health is crucial for emotional resilience.'], placeholder=1)\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nCreate a slide about 'Common Mental Health Disorders' listing some common conditions and their symptoms in bullet points.<|im_end|>\n<|im_start|>assistant\nSure, let me help with that.\n\n<tool_call>\napi.create_slide(layout='title and content', title='Common Mental Health Disorders', content='')\napi.add_bullet_points(api.get_current_slide(), points=['Depression: persistent sadness, loss of interest','Anxiety: excessive worry, restlessness','Bipolar Disorder: extreme mood swings','PTSD: flashbacks, nightmares'], placeholder=1)\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nAdd an image slide about the importance of seeking help for mental health.<|im_end|>\n<|im_start|>assistant\nI will handle that.\n\n<tool_call>\napi.create_slide(layout='picture with caption', title='Seeking Help for Mental Health', content='A photo representing the importance of reaching out for mental health support.')\napi.add_picture_with_caption(api.get_current_slide(), 'seeking help for mental health','Seeking Help for Mental Health','A photo representing the importance of reaching out for mental health support.')\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nCreate a slide about 'Mental Health Strategies' outlining ways to manage mental health in bullet points.<|im_end|>\n<|im_start|>assistant\nHere's how I can assist you.\n\n<tool_call>\napi.create_slide(layout='title and content', title='Mental Health Strategies', content='')\napi.add_bullet_points(api.get_current_slide(), points=['Regular exercise and physical activity','Practicing mindfulness and meditation','Building a support network','Seeking professional therapy or counseling','Developing healthy routines'], placeholder=1)\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nCreate a slide about 'The Role of Society in Mental Health' explaining how society influences mental health in bullet points.<|im_end|>\n<|im_start|>assistant\nI'll prepare that for you.\n\n<tool_call>\napi.create_slide(layout='title and content', title='The Role of Society in Mental Health', content='')\napi.add_bullet_points(api.get_current_slide(), points=['Reducing stigma around mental health issues','Promoting mental health awareness','Creating supportive environments','Encouraging open conversations about mental health'], placeholder=1)\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nAdd a conclusion slide summarizing the importance of mental health and the need for ongoing care and attention in bullet points.<|im_end|>\n<|im_start|>assistant\nHere's the conclusion for you.\n\n<tool_call>\napi.create_slide(layout='title and content', title='Conclusion', content='')\napi.add_bullet_points(api.get_current_slide(), points=['Prioritize mental health.','Seek support when needed.','Promote mental health awareness in society.'], placeholder=1)\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nEdit the title of the second slide to 'Understanding Mental Health' and modify the third bullet points to reflect new information.<|im_end|>\n<|im_start|>assistant\nAbsolutely, let me take care of that.\n\n<tool_call>\napi.edit_text(2-1, placeholder=0, new_text='Understanding Mental Health', paragraph_index=0)\napi.edit_text(2-1, placeholder=1,new_text='Mental health is a critical part of our lives, influencing daily decisions.', paragraph_index=3)\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nEdit the title of the first slide to 'The Importance of Mental Health' and update the second bullet point of the second slide to explain its significance in mental health awareness.<|im_end|>\n<|im_start|>assistant\nGot it, I'll make those changes.\n\n<tool_call>\napi.edit_text(1-1, placeholder=0, new_text='The Importance of Mental Health', paragraph_index=0)\napi.edit_text(2-1, placeholder=1, new_text='Mental health is essential for understanding our emotions and actions.', paragraph_index=2)\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nEdit the title of the third slide to 'Mental Health Conditions' and replace the second bullet point with a more detailed explanation of anxiety symptoms.<|im_end|>\n<|im_start|>assistant\nLet me make those changes for you.\n\n<tool_call>\napi.edit_text(3-1, placeholder=0, new_text='Mental Health Conditions', paragraph_index=0)\napi.edit_text(3-1, placeholder=1, new_text='Anxiety: persistent worry, tension, and nervousness affecting daily life.', paragraph_index=2)\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nEdit the title of the fifth slide to 'Effective Strategies for Mental Well-being' and update the fourth bullet point to emphasize the role of therapy.<|im_end|>\n<|im_start|>assistant\nSure, I'll apply those changes.\n\n<tool_call>\napi.edit_text(5-1, placeholder=0, new_text='Effective Strategies for Mental Well-being', paragraph_index=0)\napi.edit_text(5-1, placeholder=1, new_text='Seeking therapy can provide professional guidance and emotional support.', paragraph_index=4)\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nCreate a slide about 'Introduction to Financial Markets' explaining the basic concepts in bullet points.<|im_end|>\n<|im_start|>assistant\nI'll start with that.\n\n<tool_call>\napi.create_slide(layout='title and content', title='Introduction to Financial Markets', content='')\napi.add_bullet_points(api.get_current_slide(), points=['Financial markets facilitate the exchange of financial assets.','They include stock markets, bond markets, and commodities markets.','Investors participate to buy or sell assets.'], placeholder=1)\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nCreate a slide on 'Types of Financial Markets' with a list of different types and their characteristics.<|im_end|>\n<|im_start|>assistant\nI'll assist with that.\n\n<tool_call>\napi.create_slide(layout='title and content', title='Types of Financial Markets', content='')\napi.add_bullet_points(api.get_current_slide(), points=['Stock Markets: where shares of companies are bought and sold.','Bond Markets: where debt securities are issued and traded.','Commodities Markets: for trading raw materials like gold and oil.','Forex Markets: for currency exchange.'], placeholder=1)\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nCreate a slide on 'Stock Market Basics' with a picture of a stock exchange and a brief explanation of its function.<|im_end|>\n<|im_start|>assistant\nLet me handle that.\n\n<tool_call>\napi.create_slide(layout='picture with caption', title='Stock Market Basics', content='')\napi.add_picture_with_caption(api.get_current_slide(), 'stock exchange image', 'Stock Market', 'The stock market is a place where investors buy and sell shares of companies.')\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nCreate a slide on 'Investors and Market Behavior' explaining the different types of investors and their strategies in bullet points.<|im_end|>\n<|im_start|>assistant\nI'll assist with that.\n\n<tool_call>\napi.create_slide(layout='title and content', title='Investors and Market Behavior', content='')\napi.add_bullet_points(api.get_current_slide(), points=['Retail investors: individual investors who buy and sell for personal accounts.','Institutional investors: large organizations like pension funds and mutual funds.','Value investors: buy stocks they believe are undervalued.','Growth investors: invest in companies with high potential for growth.'], placeholder=1)\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nCreate a slide on 'Market Risk' explaining the different types of risks involved in financial markets.<|im_end|>\n<|im_start|>assistant\nSure, I'll do that.\n\n<tool_call>\napi.create_slide(layout='title and content', title='Market Risk', content='')\napi.add_bullet_points(api.get_current_slide(), points=['Market Risk: the risk of losses due to changes in market prices.','Credit Risk: the risk of a borrower defaulting on a loan.','Liquidity Risk: the risk of being unable to sell an asset without affecting its price.','Operational Risk: the risk of loss due to failed internal processes or systems.'], placeholder=1)\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nCreate a title slide introducing 'Entrepreneurship' with a subtitle 'Turning Ideas into Reality'.<|im_end|>\n<|im_start|>assistant\nI'll create the title slide for you.\n\n<tool_call>\napi.create_slide(layout='title', title='Entrepreneurship', subtitle='Turning Ideas into Reality')\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nAdd a slide describing the key traits of successful entrepreneurs with bullet points.<|im_end|>\n<|im_start|>assistant\nHere's the slide.\n\n<tool_call>\napi.create_slide(layout='title and content', title='Traits of Successful Entrepreneurs', content='')\napi.add_bullet_points(api.get_current_slide(), points=['Visionary thinking', 'Adaptability and resilience', 'Strong leadership skills', 'Financial literacy', 'Innovative mindset'], placeholder=1)\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nAdd an image slide with a photo representing innovation in entrepreneurship.<|im_end|>\n<|im_start|>assistant\nAbsolutely, let me take care of that.\n\n<tool_call>\napi.create_slide(layout='picture with caption', title='Innovation in Entrepreneurship', content='')\napi.add_picture_with_caption(api.get_current_slide(), 'innovation_in_business.jpg', 'Innovation', 'Creative ideas are the foundation of successful businesses.')\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nCreate a slide on common challenges in entrepreneurship, using bullet points.<|im_end|>\n<|im_start|>assistant\nAdding the slide for you.\n\n<tool_call>\napi.create_slide(layout='title and content', title='Challenges in Entrepreneurship', content='')\napi.add_bullet_points(api.get_current_slide(), points=['Securing funding', 'Market competition', 'Balancing risk and reward', 'Managing time and resources', 'Building a strong team'], placeholder=1)\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nAdd a conclusion slide summarizing the importance of entrepreneurship in driving innovation and economic growth.<|im_end|>\n<|im_start|>assistant\nAbsolutely, let me take care of that.\n\n<tool_call>\napi.create_slide(layout='title and content', title='Conclusion', content='Entrepreneurship is a driving force for innovation and economic growth, fostering new ideas and creating opportunities in a dynamic global market.')\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nCreate a slide titled 'Digital Entrepreneurship' and describe how technology has revolutionized modern businesses.<|im_end|>\n<|im_start|>assistant\nHere's the slide.\n\n<tool_call>\napi.create_slide(layout='title and content', title='Digital Entrepreneurship', content='Technology has transformed entrepreneurship by enabling online marketplaces, digital marketing, and remote collaboration, making it accessible to a broader audience.')\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nAdd a slide with bullet points outlining the benefits of digital entrepreneurship.<|im_end|>\n<|im_start|>assistant\nAbsolutely, let me take care of that.\n\n<tool_call>\napi.create_slide(layout='title and content', title='Benefits of Digital Entrepreneurship', content='')\napi.add_bullet_points(api.get_current_slide(), points=['Lower startup costs', 'Global market access', 'Scalability through technology', 'Data-driven decision-making', 'Flexible work environments'], placeholder=1)\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nInclude an image slide showcasing a successful digital startup.<|im_end|>\n<|im_start|>assistant\nHere's how I can assist you.\n\n<tool_call>\napi.create_slide(layout='picture with caption', title='Successful Digital Startup', content='')\napi.add_picture_with_caption(api.get_current_slide(), 'digital_startup_success.jpg', 'Digital Startups', 'Illustration of a thriving online business leveraging technology.')\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nChange the title of slide 1 to 'Introduction to Quantum Mechanics'.<|im_end|>\n<|im_start|>assistant\nGot it, working on that now.\n\n<tool_call>\napi.edit_text(1-1, 0, 'Introduction to Quantum Mechanics')\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nUpdate the title of slide 2 to 'Fundamentals of Quantum Theory'.<|im_end|>\n<|im_start|>assistant\nSure, let me assist you with that.\n\n<tool_call>\napi.edit_text(2-1, 0, 'Fundamentals of Quantum Theory')\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nReplace the bullet point one on slide 2 with: 'Heisenberg Uncertainty Principle'<|im_end|>\n<|im_start|>assistant\nSure, let me assist you with that.\n\n<tool_call>\napi.edit_text(2-1, 1, 'Heisenberg Uncertainty Principle',1)\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nModify the fifth bullet point on slide two to 'Quantum tunneling and its practical uses'.<|im_end|>\n<|im_start|>assistant\nI'll help you with that.\n\n<tool_call>\napi.edit_text(2-1, placeholder=1, new_text='Quantum tunneling and its practical uses', paragraph_index=5)\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nReplace the image on slide 3 with an image of a quantum field illustration.<|im_end|>\n<|im_start|>assistant\nLet me work on that for you.\n\n<tool_call>\napi.delete_images(3-1)\napi.add_picture_with_caption(3-1, 'quantum field illustration','Quantum field','Visual representation of the Quantum field')\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nCreate a title slide introducing 'International Trade' with the subtitle 'The Backbone of Global Economies'.<|im_end|>\n<|im_start|>assistant\nAlright, let me address that for you.\n\n<tool_call>\napi.create_slide(layout='title', title='International Trade', subtitle='The Backbone of Global Economies')\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nAdd a slide titled 'Definition of International Trade' with a short explanation in the text area.<|im_end|>\n<|im_start|>assistant\nSure thing, let me sort this out for you.\n\n<tool_call>\napi.create_slide(layout='title and content', title='Definition of International Trade', content='International trade involves the exchange of goods and services across national borders, facilitating economic growth and cultural exchange.')\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nInclude a slide with an image that represents global trade networks.<|im_end|>\n<|im_start|>assistant\nHappy to help, let me handle this\n\n<tool_call>\napi.create_slide(layout='picture with caption', title='Global Trade Networks', content='')\napi.add_picture_with_caption(api.get_current_slide(), 'global_trade.jpg', 'Global Trade Networks', 'Visualizing interconnected economies worldwide.')\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nCreate a slide titled 'Key Benefits of International Trade' with bullet points listing the main advantages.<|im_end|>\n<|im_start|>assistant\nOn it! Let me take a closer look.\n\n<tool_call>\napi.create_slide(layout='title and content', title='Key Benefits of International Trade', content='')\napi.add_bullet_points(api.get_current_slide(), points=['Access to diverse goods and services', 'Economic growth and job creation', 'Encourages innovation and competition', 'Strengthens diplomatic ties', 'Optimizes resource allocation'], placeholder=1)\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nAdd a conclusion slide summarizing the importance of international trade in today's interconnected world.<|im_end|>\n<|im_start|>assistant\nSure thing, let me sort this out for you.\n\n<tool_call>\napi.create_slide(layout='title and content', title='Conclusion', content='International trade is essential in a globalized world, driving economic growth, fostering innovation, and strengthening international relationships.')\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nCreate a slide titled 'Barriers to International Trade' and describe common obstacles in the text area.<|im_end|>\n<|im_start|>assistant\nHere’s the slide.\n\n<tool_call>\napi.create_slide(layout='title and content', title='Barriers to International Trade', content='Trade barriers include tariffs, quotas, and non-tariff measures, often implemented to protect domestic industries or address geopolitical concerns.')\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nAdd a slide with bullet points summarizing the impacts of trade barriers on global commerce.<|im_end|>\n<|im_start|>assistant\nCreating the slide for you.\n\n<tool_call>\napi.create_slide(layout='title and content', title='Impacts of Trade Barriers', content='')\napi.add_bullet_points(api.get_current_slide(), points=['Reduces market accessibility', 'Increases costs for consumers and producers', 'Limits economic growth', 'Hinders international cooperation'], placeholder=1)\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nAdd an image slide showing a representation of tariffs or quotas in trade policy.<|im_end|>\n<|im_start|>assistant\nAdding the image slide.\n\n<tool_call>\napi.create_slide(layout='picture with caption', title='Representation of Trade Barriers', content='')\napi.add_picture_with_caption(api.get_current_slide(), 'trade_barriers.jpg', 'Trade Barriers', 'Visualizing the effects of tariffs and quotas.')\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nCreate a title slide introducing 'The History of Cinema' with the subtitle 'From Silent Films to Modern Blockbusters'.<|im_end|>\n<|im_start|>assistant\nCertainly, I'm here to assist you.\n\n<tool_call>\napi.create_slide(layout='title', title='The History of Cinema', subtitle='From Silent Films to Modern Blockbusters')\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nAdd a slide titled 'Origins of Cinema' with a short explanation about its beginnings in the late 19th century.<|im_end|>\n<|im_start|>assistant\nGot it! Let me take care of this.\n\n<tool_call>\napi.create_slide(layout='title and content', title='Origins of Cinema', content='Cinema began in the late 19th century with silent films and simple moving pictures, pioneered by inventors like the Lumiere brothers.')\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nInclude a slide with an image of early cinema technology like a film projector.<|im_end|>\n<|im_start|>assistant\nOf course! I'll get started immediately.\n\n<tool_call>\napi.create_slide(layout='picture with caption', title='Early Cinema Technology', content='')\napi.add_picture_with_caption(api.get_current_slide(), 'a vintage film projector', 'Early Cinema Technology', 'Image of a vintage film projector from the silent film era.')\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nCreate a slide titled 'Key Milestones in Cinema' with a bullet-point list of important developments in film history.<|im_end|>\n<|im_start|>assistant\nSure thing, let me sort this out for you.\n\n<tool_call>\napi.create_slide(layout='title and content', title='Key Milestones in Cinema', content='')\napi.add_bullet_points(api.get_current_slide(), points=['1895: Lumiere brothers screen first film', '1927: Introduction of sound with *The Jazz Singer*', '1939: Technicolor breakthrough with *The Wizard of Oz*', '1960s: New Wave movements redefine storytelling', '1995: CGI revolution with *Toy Story*'], placeholder=1)\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nAdd a conclusion slide summarizing the evolution and impact of cinema on culture and entertainment.<|im_end|>\n<|im_start|>assistant\nAlright, let me address that for you.\n\n<tool_call>\napi.create_slide(layout='title and content', title='Conclusion', content='Cinema has evolved from silent black-and-white films to a global entertainment powerhouse, shaping culture and storytelling worldwide.')\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nChange the title of slide 4 to 'Applications of Quantum Computing'.<|im_end|>\n<|im_start|>assistant\nGot it, working on that now.\n\n<tool_call>\napi.edit_text(4-1, 0, 'Applications of Quantum Computing')\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nReplace the image on slide 5 with an image of a quantum circuit diagram.<|im_end|>\n<|im_start|>assistant\nLet me handle that for you.\n\n<tool_call>\napi.delete_images(5-1)\napi.add_picture_with_caption(5-1, 'quantum circuit diagram', 'Quantum Circuit', 'Diagram of a quantum circuit')\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nModify the third bullet point on slide 3 to 'Quantum entanglement and its role in teleportation'.<|im_end|>\n<|im_start|>assistant\nSure, let me assist you with that.\n\n<tool_call>\napi.edit_text(3-1, 1, 'Quantum entanglement and its role in teleportation',3)\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nCreate a title slide introducing 'The History of Music' with the subtitle 'From Ancient Rhythms to Modern Genres'.<|im_end|>\n<|im_start|>assistant\nCertainly, I'm here to assist you.\n\n<tool_call>\napi.create_slide(layout='title', title='The History of Music', subtitle='From Ancient Rhythms to Modern Genres')\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nAdd a slide titled 'Origins of Music' with a description about the earliest forms of music and their cultural significance.<|im_end|>\n<|im_start|>assistant\nLet me work on that for you.\n\n<tool_call>\napi.create_slide(layout='title and content', title='Origins of Music', content='Music originated in ancient cultures as a way to communicate, celebrate, and express emotions. Early music included rhythms created with primitive instruments.')\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nInclude a slide with an image of ancient musical instruments like flutes or drums.<|im_end|>\n<|im_start|>assistant\nGot it! Let me take care of this.\n\n<tool_call>\napi.create_slide(layout='picture with caption', title='Ancient Musical Instruments', content='')\napi.add_picture_with_caption(api.get_current_slide(), 'an image of ancient flutes and drums', 'Ancient Instruments', 'Early musical instruments used by ancient civilizations.')\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nCreate a slide titled 'Evolution of Music Genres' with a bullet-point list highlighting key genres through history.<|im_end|>\n<|im_start|>assistant\nAbsolutely, let me take care of that.\n\n<tool_call>\napi.create_slide(layout='title and content', title='Evolution of Music Genres', content='')\napi.add_bullet_points(api.get_current_slide(), points=['Classical music: 1600s 1800s', 'Jazz: Early 20th century', 'Rock and Roll: 1950s', 'Hip Hop: 1970s', 'Electronic: 1990s'], placeholder=1)\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nAdd a conclusion slide summarizing the importance of music in culture and personal expression.<|im_end|>\n<|im_start|>assistant\nHappy to help, let me handle this.\n\n<tool_call>\napi.create_slide(layout='title and content', title='Conclusion', content='Music has been a constant in human history, evolving with societies and serving as a powerful form of cultural and personal expression.')\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nChange the title of the slide 2 to 'Early Music and Cultures'.<|im_end|>\n<|im_start|>assistant\nGot it, I'll take care of that.\n\n<tool_call>\napi.edit_text(2-1, 0, 'Early Music and Cultures')\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nReplace the image on the slide three with an image of ancient string instruments like lyres or harps.<|im_end|>\n<|im_start|>assistant\nCertainly, let me assist you with that.\n\n<tool_call>\napi.delete_images(3-1)\napi.add_picture_with_caption(3-1, 'an image of ancient lyres and harps', 'Ancient String Instruments', 'Musical instruments like lyres and harps from ancient times.')\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nModify the fourth bullet point on the slide 4 to 'Hip Hop: 1970s and its cultural impact'.<|im_end|>\n<|im_start|>assistant\nI'll update that for you.\n\n<tool_call>\napi.edit_text(4-1, 1, 'Hip Hop: 1970s and its cultural impact', 4)\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nReplace the bullet points of the slide 4 to 'Pop Music: 1980s'.<|im_end|>\n<|im_start|>assistant\nLet me add that for you.\n\n<tool_call>\napi.add_bullet_points(4-1, ['Pop Music: 1980s'], placeholder=1)\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nCreate a title slide introducing 'The Fundamentals of Music' with the subtitle 'Understanding the building blocks of sound'.<|im_end|>\n<|im_start|>assistant\nSure, let me assist you with that.\n\n<tool_call>\napi.create_slide(layout='title', title='The Fundamentals of Music', subtitle='Understanding the building blocks of sound')\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nAdd a slide titled 'What is Music?' with a description defining music as an art form and its components.<|im_end|>\n<|im_start|>assistant\nGot it, working on that now.\n\n<tool_call>\napi.create_slide(layout='title and content', title='What is Music?', content='Music is an art form that organizes sounds and silences to convey emotions, tell stories, or entertain. It includes rhythm, melody, harmony, and dynamics.')\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nInclude a slide with an image of a musical score or sheet music.<|im_end|>\n<|im_start|>assistant\nRight away, let me help you with that.\n\n<tool_call>\napi.create_slide(layout='picture with caption', title='Sheet Music', content='')\napi.add_picture_with_caption(api.get_current_slide(), 'an image of sheet music', 'Sheet Music', 'Representation of melodies and harmonies.')\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nCreate a slide titled 'Key Elements of Music' with a bullet-point list of elements like rhythm, melody, harmony, dynamics, and timbre.<|im_end|>\n<|im_start|>assistant\nCertainly, I'm here to assist you.\n\n<tool_call>\napi.create_slide(layout='title and content', title='Key Elements of Music', content='')\napi.add_bullet_points(api.get_current_slide(), points=['Rhythm: The timing of sounds', 'Melody: The tune or main theme', 'Harmony: Chords and accompaniment', 'Dynamics: Volume changes', 'Timbre: Unique sound qualities'], placeholder=1)\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nAdd a conclusion slide summarizing the importance of understanding these elements to appreciate and create music.<|im_end|>\n<|im_start|>assistant\nHappy to help, let me handle this.\n\n<tool_call>\napi.create_slide(layout='title and content', title='Conclusion', content='Understanding the fundamental elements of music helps us appreciate its beauty and complexity, as well as create meaningful compositions.')\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nChange the title of the first slide to 'Introduction to Music Fundamentals'.<|im_end|>\n<|im_start|>assistant\nLet me take care of that.\n\n<tool_call>\napi.edit_text(1-1, 0, 'Introduction to Music Fundamentals')\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nUpdate the content of the slide two to 'Music is an art form that organizes sounds and silences to convey emotions, tell stories, or entertain. It includes rhythm, melody, harmony, and dynamics. It is a universal language that transcends boundaries.'.<|im_end|>\n<|im_start|>assistant\nGot it, updating the content now.\n\n<tool_call>\napi.edit_text(2-1, 1, 'Music is an art form that organizes sounds and silences to convey emotions, tell stories, or entertain. It includes rhythm, melody, harmony, and dynamics. It is a universal language that transcends boundaries.')\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nReplace the image on the slide 3 with an image of a conductor leading an orchestra.<|im_end|>\n<|im_start|>assistant\nCertainly, let me update that for you.\n\n<tool_call>\napi.delete_images(3-1)\napi.add_picture_with_caption(3-1, 'an image of a conductor leading an orchestra', 'Conducting Music', 'A conductor guiding the performance of an orchestra.')\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nDelete the slide 4.<|im_end|>\n<|im_start|>assistant\nUnderstood, I'll remove that slide for you.\n\n<tool_call>\napi.delete_slide(4-1)\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nCreate a title slide introducing 'An Introduction to Literature' with the subtitle 'Exploring the art of written expression'.<|im_end|>\n<|im_start|>assistant\nSure, let me assist you with that.\n\n<tool_call>\napi.create_slide(layout='title', title='An Introduction to Literature', subtitle='Exploring the art of written expression')\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nAdd a slide titled 'What is Literature?' with a detailed description defining literature as written works with artistic or intellectual value.<|im_end|>\n<|im_start|>assistant\nGot it, working on that now.\n\n<tool_call>\napi.create_slide(layout='title and content', title='What is Literature?', content='Literature refers to written works that are considered to have artistic or intellectual value. It includes poetry, prose, drama, and other forms of written expression that explore human experiences and emotions.')\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nInclude a slide with an image of a classic book or a library to visually represent literature.<|im_end|>\n<|im_start|>assistant\nRight away, let me help you with that.\n\n<tool_call>\napi.create_slide(layout='picture with caption', title='Timeless Classics', content='')\napi.add_picture_with_caption(api.get_current_slide(), 'an image of a library or classic book', 'Timeless Classics', 'Representation of literature through classic works.')\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nCreate a slide titled 'Genres of Literature' with a bullet-point list of genres like poetry, drama, fiction, and non-fiction.<|im_end|>\n<|im_start|>assistant\nCertainly, I'm here to assist you.\n\n<tool_call>\napi.create_slide(layout='title and content', title='Genres of Literature', content='')\napi.add_bullet_points(api.get_current_slide(), points=['Poetry: Expressive and rhythmic', 'Drama: Stories performed on stage', 'Fiction: Imaginative storytelling', 'Non-Fiction: Factual and informative'], placeholder=1)\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nAdd a conclusion slide summarizing the importance of literature in understanding cultures and human emotions.<|im_end|>\n<|im_start|>assistant\nHappy to help, let me handle this.\n\n<tool_call>\napi.create_slide(layout='title and content', title='Conclusion', content='Literature serves as a mirror to society, offering insights into human emotions, cultures, and the complexities of life.')\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nChange the title of the first slide to 'Introduction to the World of Literature'.<|im_end|>\n<|im_start|>assistant\nAbsolutely, let me take care of that.\n\n<tool_call>\napi.edit_text(1-1, 0, 'Introduction to the World of Literature')\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nUpdate the content of the slide two to 'Literature encompasses written works with artistic and intellectual depth, reflecting human experiences and cultural values.'.<|im_end|>\n<|im_start|>assistant\nGot it, working on that now.\n\n<tool_call>\napi.edit_text(2-1, 1, 'Literature encompasses written works with artistic and intellectual depth, reflecting human experiences and cultural values.')\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nReplace the image on the slide 3 with an image of a stack of classic books on a wooden table.<|im_end|>\n<|im_start|>assistant\nSure thing, let me sort this out for you.\n\n<tool_call>\napi.delete_images(3-1)\napi.add_picture_with_caption(3-1, 'an image of a stack of classic books on a wooden table', 'Classic Literature', 'A stack of timeless literary works.')\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nDelete the slide 4.<|im_end|>\n<|im_start|>assistant\nUnderstood, working on it now.\n\n<tool_call>\napi.delete_slide(4-1)\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nUpdate the content of the slide five to 'Through literature, we gain a deeper understanding of diverse cultures, human emotions, and the essence of life.'.<|im_end|>\n<|im_start|>assistant\nNo problem, I'll handle that for you.\n\n<tool_call>\napi.edit_text(5-1, 1, 'Through literature, we gain a deeper understanding of diverse cultures, human emotions, and the essence of life.')\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nCreate a title slide introducing 'The World of Video Games' with the subtitle 'Exploring digital entertainment'.<|im_end|>\n<|im_start|>assistant\nAbsolutely, let me take care of that.\n\n<tool_call>\napi.create_slide(layout='title', title='The World of Video Games', subtitle='Exploring digital entertainment')\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nAdd a slide titled 'What is a Video Game?' with a detailed explanation of video games as interactive digital entertainment designed for fun and engagement.<|im_end|>\n<|im_start|>assistant\nGot it! Let me take care of this.\n\n<tool_call>\napi.create_slide(layout='title and content', title='What is a Video Game?', content='Video games are interactive digital entertainment experiences that allow players to engage with a virtual world. They combine graphics, sound, and gameplay mechanics to provide immersive and entertaining experiences.')\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nAdd a slide listing the advantages of playing video games, such as improving problem-solving skills, enhancing hand-eye coordination, and promoting social interaction through multiplayer games.<|im_end|>\n<|im_start|>assistant\nSure thing, let me sort this out for you.\n\n<tool_call>\napi.create_slide(layout='title and content', title='Advantages of Video Games', content='')\napi.add_bullet_points(api.get_current_slide(), points=['Enhances problem-solving skills', 'Improves hand-eye coordination', 'Encourages social interaction through multiplayer modes', 'Provides a source of stress relief and entertainment'], placeholder=1)\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nAdd a slide listing the disadvantages of playing video games, such as potential addiction, sedentary lifestyle, and exposure to violent content.<|im_end|>\n<|im_start|>assistant\nLet me work on that for you.\n\n<tool_call>\napi.create_slide(layout='title and content', title='Disadvantages of Video Games', content='')\napi.add_bullet_points(api.get_current_slide(), points=['Risk of addiction', 'Can lead to a sedentary lifestyle', 'Exposure to violent or inappropriate content', 'Potential negative impact on academic performance'], placeholder=1)\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nAdd an image slide showing a famous video game, like The Legend of Zelda, to visually represent iconic games in the industry.<|im_end|>\n<|im_start|>assistant\nOn it! Let me assist.\n\n<tool_call>\napi.create_slide(layout='picture with caption', title='Iconic Video Games', content='')\napi.add_picture_with_caption(api.get_current_slide(), 'an image of The Legend of Zelda', 'Iconic Video Games', 'The Legend of Zelda is one of the most celebrated franchises in gaming history.')\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nAdd a conclusion slide summarizing the evolution of video games and their importance in modern culture and entertainment.<|im_end|>\n<|im_start|>assistant\nCertainly, I'm here to assist you.\n\n<tool_call>\napi.create_slide(layout='title and content', title='Conclusion', content='Video games have evolved from simple pixelated experiences to complex virtual worlds. They play a significant role in modern culture, providing entertainment, fostering creativity, and connecting people worldwide.')\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nChange the title of the first slide to 'The Universe of Video Games'.<|im_end|>\n<|im_start|>assistant\nSure thing, let me update that.\n\n<tool_call>\napi.edit_text(1-1, 0, 'The Universe of Video Games')\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nUpdate the content of the second slide to 'Video games are dynamic and engaging digital platforms that combine storytelling, art, and technology for entertainment and learning.'.<|im_end|>\n<|im_start|>assistant\nGot it! Updating it now.\n\n<tool_call>\napi.edit_text(2-1, 1, 'Video games are dynamic and engaging digital platforms that combine storytelling, art, and technology for entertainment and learning.')\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nReplace the image in the fifth slide with an image of Super Mario Bros to represent classic video games.<|im_end|>\n<|im_start|>assistant\nOf course, let me handle that for you.\n\n<tool_call>\napi.delete_images(5-1)\napi.add_picture_with_caption(5-1, 'an image of Super Mario Bros', 'Classic Video Games', 'Super Mario Bros is an iconic and influential video game series.')\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nUpdate the content of the sixth slide to 'From Pong to modern virtual reality, video games have become a key part of global culture, inspiring innovation and connection.'.<|im_end|>\n<|im_start|>assistant\nSure, let me take care of that.\n\n<tool_call>\napi.edit_text(6-1, 1, 'From Pong to modern virtual reality, video games have become a key part of global culture, inspiring innovation and connection.')\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nChange the text of bullet point 4 in slide 4 to 'May negatively affect time management skills'.<|im_end|>\n<|im_start|>assistant\nGot it, let me update that for you.\n\n<tool_call>\napi.edit_text(4-1, 1, 'May negatively affect time management skills',4)\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nDelete slide 6 from the presentation.<|im_end|>\n<|im_start|>assistant\nSure, let me take care of that.\n\n<tool_call>\napi.delete_slide(6-1)\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nCreate a title slide introducing 'Cultural Trends of the 21st Century' with the subtitle 'Exploring the evolution of global culture'.<|im_end|>\n<|im_start|>assistant\nAbsolutely, let me take care of that.\n\n<tool_call>\napi.create_slide(layout='title', title='Cultural Trends of the 21st Century', subtitle='Exploring the evolution of global culture')\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nAdd a slide titled 'What Are Cultural Trends?' with a description explaining cultural trends as evolving patterns of behavior, ideas, and practices in societies.<|im_end|>\n<|im_start|>assistant\nGot it! Let me take care of this.\n\n<tool_call>\napi.create_slide(layout='title and content', title='What Are Cultural Trends?', content='Cultural trends refer to evolving patterns of behavior, ideas, and practices that shape societies over time. They reflect changes in values, technology, and interactions.')\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nAdd a slide listing examples of current cultural trends, such as the rise of sustainability, digital nomadism, and globalized entertainment.<|im_end|>\n<|im_start|>assistant\nSure thing, let me sort this out for you.\n\n<tool_call>\napi.create_slide(layout='title and content', title='Examples of Cultural Trends', content='')\napi.add_bullet_points(api.get_current_slide(), points=['Sustainability and eco-conscious living', 'Digital nomadism and remote work', 'Globalized entertainment and streaming culture', 'Focus on mental health and well-being'], placeholder=1)\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nAdd a slide describing the impact of social media on cultural trends, highlighting its role in shaping global conversations and spreading ideas.<|im_end|>\n<|im_start|>assistant\nLet me work on that for you.\n\n<tool_call>\napi.create_slide(layout='title and content', title='Social Media and Cultural Trends', content='Social media platforms play a pivotal role in shaping cultural trends by enabling global conversations, spreading ideas, and influencing behaviors in real time.')\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nAdd a conclusion slide summarizing the importance of understanding cultural trends to adapt and thrive in a globalized world.<|im_end|>\n<|im_start|>assistant\nCertainly, I'm here to assist you.\n\n<tool_call>\napi.create_slide(layout='title and content', title='Conclusion', content='Understanding cultural trends is essential for adapting to the dynamic nature of societies. It helps individuals and organizations thrive in an increasingly interconnected world.')\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nChange the text of bullet point 3 in slide 3 to 'Globalized entertainment through diverse media platforms'.<|im_end|>\n<|im_start|>assistant\nSure, let me take care of that.\n\n<tool_call>\napi.edit_text(3-1, 1, 'Globalized entertainment through diverse media platforms', 3)\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nDelete slide 2 from the presentation.<|im_end|>\n<|im_start|>assistant\nSure, let me take care of that.\n\n<tool_call>\napi.delete_slide(2-1)\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nCreate a slide titled 'Advantages of Airplanes' with bullet points listing the key benefits of using airplanes for transportation.<|im_end|>\n<|im_start|>assistant\nCertainly, I'm here to assist you.\n\n<tool_call>\napi.create_slide(layout='title and content', title='Advantages of Airplanes', content='')\napi.add_bullet_points(api.get_current_slide(), points=['Fastest mode of transportation for long distances', 'Connects remote and inaccessible areas', 'Efficient for international travel', 'High safety standards compared to other modes of transport', 'Supports global trade and tourism'], placeholder=1)\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nCreate a slide titled 'Advantages of Airplanes' with bullet points listing the key benefits of using airplanes for transportation, including subpoints for more detail.<|im_end|>\n<|im_start|>assistant\nCertainly, I'm here to assist you.\n\n<tool_call>\napi.create_slide(layout='title and content', title='Advantages of Airplanes', content='')\napi.add_bullet_points(api.get_current_slide(), points=['Fastest mode of transportation for long distances','Reduces travel time significantly','Connects remote and inaccessible areas'], placeholder=1)\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nCreate a slide titled 'Benefits of Renewable Energy' with bullet points highlighting the advantages of renewable energy sources, including subpoints for more detail.<|im_end|>\n<|im_start|>assistant\nSure, let me take care of that.\n\n<tool_call>\napi.create_slide(layout='title and content', title='Benefits of Renewable Energy', content='')\napi.add_bullet_points(api.get_current_slide(), points=['(Environmentally friendly, 0)', '(Reduces carbon footprint, 1)', '(Decreases reliance on fossil fuels, 1)', '(Economic benefits, 0)', '(Creates job opportunities, 1)', '(Lowers energy costs over time, 1)'], placeholder=1)\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nCreate a slide titled 'Importance of Physical Exercise' with bullet points describing the health benefits of regular exercise, including subpoints for different aspects.<|im_end|>\n<|im_start|>assistant\nAlright, let me address that for you.\n\n<tool_call>\napi.create_slide(layout='title and content', title='Importance of Physical Exercise', content='')\napi.add_bullet_points(api.get_current_slide(), points=['(Improves physical health, 0)', '(Enhances cardiovascular health, 1)', '(Builds muscle strength, 1)', '(Boosts mental well-being, 0)', '(Reduces stress and anxiety, 1)', '(Improves sleep quality, 1)', '(Supports weight management, 0)', '(Increases metabolism, 1)', '(Burns calories effectively, 1)'], placeholder=1)\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nCreate a slide titled 'Importance of Physical Exercise' with bullet points describing the health benefits of regular exercise, including subpoints for different aspects.<|im_end|>\n<|im_start|>assistant\nCertainly, On it! Let me take a closer look.\n\n<tool_call>\napi.create_slide(layout='title and content', title='Importance of Physical Exercise', content='')\napi.add_bullet_points(api.get_current_slide(), points=['(Improves physical health, 0)', '(Enhances cardiovascular health, 1)', '(Builds muscle strength, 1)', '(Boosts mental well-being, 0)', '(Reduces stress and anxiety, 1)', '(Improves sleep quality, 1)', '(Supports weight management, 0)', '(Increases metabolism, 1)', '(Burns calories effectively, 1)'], placeholder=1)\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nCreate a slide titled 'Features of Modern Smartphones' with bullet points listing key features, including subpoints for specific technologies.<|im_end|>\n<|im_start|>assistant\nLet me work on that for you.\n\n<tool_call>\napi.create_slide(layout='title and content', title='Features of Modern Smartphones', content='')\napi.add_bullet_points(api.get_current_slide(), points=['(High-resolution cameras, 0)', '(Supports 4K video recording, 1)', '(Advanced image stabilization, 1)', '(Fast processing speeds, 0)', '(Powered by multi-core processors, 1)', '(Optimized for gaming and multitasking, 1)', '(Connectivity options, 0)', '(5G compatibility, 1)', '(Bluetooth and NFC integration, 1)'], placeholder=1)\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nCreate a slide titled 'Causes of Climate Change' with bullet points outlining major contributors, including subpoints for specific activities or sources.<|im_end|>\n<|im_start|>assistant\nRight away, let me help you with that.\n\n<tool_call>\napi.create_slide(layout='title and content', title='Causes of Climate Change', content='')\napi.add_bullet_points(api.get_current_slide(), points=['(Greenhouse gas emissions, 0)', '(Burning of fossil fuels, 1)', '(Industrial activities, 1)', '(Deforestation, 0)', '(Reduces carbon absorption, 1)', '(Increases atmospheric CO2, 1)', '(Agricultural practices, 0)', '(Methane emissions from livestock, 1)', '(Use of synthetic fertilizers, 1)'], placeholder=1)\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nCreate a slide titled 'Benefits of Learning a Second Language' with bullet points explaining the advantages, including subpoints for personal and professional benefits.<|im_end|>\n<|im_start|>assistant\nI'll get that done for you in no time.\n\n<tool_call>\napi.create_slide(layout='title and content', title='Benefits of Learning a Second Language', content='')\napi.add_bullet_points(api.get_current_slide(), points=['(Cognitive benefits, 0)', '(Improves memory and focus, 1)', '(Enhances problem-solving skills, 1)', '(Cultural understanding, 0)', '(Allows deeper connections with other cultures, 1)', '(Fosters appreciation for diversity, 1)', '(Career opportunities, 0)', '(Increases job prospects, 1)', '(Provides a competitive edge in the global market, 1)'], placeholder=1)\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nCreate a slide titled 'Benefits of Teamwork' with bullet points highlighting the advantages of teamwork, including subpoints for specific benefits and detailed examples.<|im_end|>\n<|im_start|>assistant\nGot it! Let me take care of this.\n\n<tool_call>\napi.create_slide(layout='title and content', title='Benefits of Teamwork', content='')\napi.add_bullet_points(api.get_current_slide(), points=['(Improves efficiency, 0)', '(Tasks are divided among team members, 1)', '(Leads to faster completion, 2)', '(Enhances creativity, 0)', '(Encourages brainstorming, 1)', '(Generates diverse ideas, 2)', '(Builds strong relationships, 0)', '(Promotes trust and collaboration, 1)', '(Improves communication skills, 2)'], placeholder=1)\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nCreate a slide titled 'Steps to Effective Problem Solving' with bullet points outlining the key steps, including subpoints for actions and examples.<|im_end|>\n<|im_start|>assistant\nAbsolutely, let me take care of that.\n\n<tool_call>\napi.create_slide(layout='title and content', title='Steps to Effective Problem Solving', content='')\napi.add_bullet_points(api.get_current_slide(), points=['(Identify the problem, 0)', '(Understand the root cause, 1)', '(Gather relevant data, 2)', '(Develop possible solutions, 0)', '(Brainstorm with the team, 1)', '(Evaluate feasibility of ideas, 2)', '(Implement the solution, 0)', '(Monitor progress, 1)', '(Adjust if necessary, 2)'], placeholder=1)\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nCreate a slide titled 'Layers of the Atmosphere' with bullet points describing each layer, including subpoints for their characteristics and examples.<|im_end|>\n<|im_start|>assistant\nSure, let me assist you with that.\n\n<tool_call>\napi.create_slide(layout='title and content', title='Layers of the Atmosphere', content='')\napi.add_bullet_points(api.get_current_slide(), points=['(Troposphere, 0)', '(Closest to Earth, 1)', '(Weather occurs here, 2)', '(Stratosphere, 0)', '(Contains the ozone layer, 1)', '(Protects against UV radiation, 2)', '(Mesosphere, 0)', '(Meteors burn up here, 1)', '(Coldest layer, 2)', '(Thermosphere, 0)', '(Auroras occur here, 1)', '(Space stations orbit here, 2)'], placeholder=1)\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nCreate a slide titled 'Features of Artificial Intelligence' with bullet points listing the capabilities of AI, including subpoints for applications and technologies.<|im_end|>\n<|im_start|>assistant\nLet's get started with that.\n\n<tool_call>\napi.create_slide(layout='title and content', title='Features of Artificial Intelligence', content='')\napi.add_bullet_points(api.get_current_slide(), points=['(Machine Learning, 0)', '(Predictive analytics, 1)', '(Used in recommendation systems, 2)', '(Natural Language Processing, 0)', '(Enables chatbots, 1)', '(Facilitates language translation, 2)', '(Computer Vision, 0)', '(Object recognition, 1)', '(Used in autonomous vehicles, 2)'], placeholder=1)\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nCreate a slide titled 'Key Components of a Healthy Diet' with bullet points describing essential nutrients, including subpoints for their sources and benefits.<|im_end|>\n<|im_start|>assistant\nNo problem, I'll handle that for you.\n\n<tool_call>\napi.create_slide(layout='title and content', title='Key Components of a Healthy Diet', content='')\napi.add_bullet_points(api.get_current_slide(), points=['(Proteins, 0)', '(Builds and repairs tissues, 1)', '(Sources: Meat, fish, beans, 2)', '(Carbohydrates, 0)', '(Provides energy, 1)', '(Sources: Whole grains, fruits, 2)', '(Fats, 0)', '(Supports cell function, 1)', '(Sources: Avocado, nuts, 2)', '(Vitamins and Minerals, 0)', '(Boosts immunity, 1)', '(Sources: Vegetables, dairy, 2)'], placeholder=1)\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nCreate a slide titled 'Importance of Time Management' with bullet points discussing its benefits, including subpoints for details.<|im_end|>\n<|im_start|>assistant\nAlright, let me address that for you.\n\n<tool_call>\napi.create_slide(layout='title and content', title='Importance of Time Management', content='')\napi.add_bullet_points(api.get_current_slide(), points=['(Improves productivity, 0)', '(Helps prioritize tasks effectively, 1)', '(Reduces stress, 0)', '(Provides a sense of control over tasks, 1)'], placeholder=1)\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nCreate a slide titled 'Advantages of Electric Cars' with bullet points listing their benefits, including subpoints for specific details.<|im_end|>\n<|im_start|>assistant\nGot it, working on that now.\n\n<tool_call>\napi.create_slide(layout='title and content', title='Advantages of Electric Cars', content='')\napi.add_bullet_points(api.get_current_slide(), points=['(Environmentally friendly, 0)', '(Reduces greenhouse gas emissions, 1)', '(Lower operational costs, 0)', '(Cheaper to maintain than gasoline cars, 1)'], placeholder=1)\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nCreate a slide titled 'Benefits of Reading' with bullet points explaining its advantages, including subpoints for examples.<|im_end|>\n<|im_start|>assistant\nOf course! I'll get started immediately.\n\n<tool_call>\napi.create_slide(layout='title and content', title='Benefits of Reading', content='')\napi.add_bullet_points(api.get_current_slide(), points=['(Enhances knowledge, 0)', '(Provides access to new ideas and perspectives, 1)', '(Improves mental health, 0)', '(Reduces stress and promotes relaxation, 1)'], placeholder=1)\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nCreate a slide titled 'Role of Technology in Education' with bullet points describing its impact, including subpoints for details.<|im_end|>\n<|im_start|>assistant\nSure thing, let me sort this out for you.\n\n<tool_call>\napi.create_slide(layout='title and content', title='Role of Technology in Education', content='')\napi.add_bullet_points(api.get_current_slide(), points=['(Enhances accessibility, 0)', '(Online learning makes education more inclusive, 1)', '(Improves engagement, 0)', '(Interactive tools make learning more effective, 1)'], placeholder=1)\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nCreate a slide titled 'Challenges of Remote Work' with bullet points outlining the key difficulties, including subpoints for elaboration.<|im_end|>\n<|im_start|>assistant\nRight away, let me help you with that.\n\n<tool_call>\napi.create_slide(layout='title and content', title='Challenges of Remote Work', content='')\napi.add_bullet_points(api.get_current_slide(), points=['(Lack of work-life balance, 0)', '(Blurred boundaries between work and personal life, 1)', '(Communication barriers, 0)', '(Limited face-to-face interactions, 1)'], placeholder=1)\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nCreate a slide titled 'Benefits of Regular Exercise' with bullet points and subpoints explaining its advantages.<|im_end|>\n<|im_start|>assistant\nGot it! Let me take care of this.\n\n<tool_call>\napi.create_slide(layout='title and content', title='Benefits of Regular Exercise', content='')\napi.add_bullet_points(api.get_current_slide(), points=['(Improves physical health, 0)', '(Enhances cardiovascular function, 1)', '(Strengthens muscles and bones, 1)', '(Boosts mental health, 0)', '(Reduces symptoms of depression and anxiety, 1)', '(Improves sleep quality, 1)'], placeholder=1)\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nCreate a slide titled 'Importance of Financial Planning' with bullet points and subpoints outlining its benefits.<|im_end|>\n<|im_start|>assistant\nNo problem, I'll handle that for you.\n\n<tool_call>\napi.create_slide(layout='title and content', title='Importance of Financial Planning', content='')\napi.add_bullet_points(api.get_current_slide(), points=['(Ensures financial security, 0)', '(Helps save for emergencies, 1)', '(Provides a safety net for unexpected expenses, 1)', '(Supports long-term goals, 0)', '(Facilitates retirement planning, 1)', '(Enables investments for future growth, 1)'], placeholder=1)\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nCreate a slide titled 'Challenges of Urbanization' with bullet points and subpoints describing its difficulties.<|im_end|>\n<|im_start|>assistant\nHappy to help, let me handle this.\n\n<tool_call>\napi.create_slide(layout='title and content', title='Challenges of Urbanization', content='')\napi.add_bullet_points(api.get_current_slide(), points=['(Overpopulation, 0)', '(Increased demand for housing, 1)', '(Strain on public services, 1)', '(Environmental impact, 0)', '(Higher pollution levels, 1)', '(Loss of green spaces, 1)'], placeholder=1)\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nCreate a slide titled 'Role of Artificial Intelligence' with bullet points and subpoints explaining its impact.<|im_end|>\n<|im_start|>assistant\nAbsolutely, let me take care of that.\n\n<tool_call>\napi.create_slide(layout='title and content', title='Role of Artificial Intelligence', content='')\napi.add_bullet_points(api.get_current_slide(), points=['(Enhances efficiency, 0)', '(Automates repetitive tasks, 1)', '(Improves decision-making with data insights, 1)', '(Transforms industries, 0)', '(Revolutionizes healthcare with diagnostics, 1)', '(Optimizes logistics and supply chains, 1)'], placeholder=1)\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nCreate a slide titled 'Benefits of Renewable Energy' with bullet points and subpoints explaining its advantages.<|im_end|>\n<|im_start|>assistant\nSure, let me assist you with that.\n\n<tool_call>\napi.create_slide(layout='title and content', title='Benefits of Renewable Energy', content='')\napi.add_bullet_points(api.get_current_slide(), points=['(Reduces carbon footprint, 0)', '(Lowers greenhouse gas emissions, 1)', '(Mitigates climate change, 1)', '(Promotes energy independence, 0)', '(Decreases reliance on fossil fuels, 1)', '(Encourages local energy production, 1)'], placeholder=1)\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nEdit the first bullet point to emphasize its role in environmental protection and update the second subbullet point to highlight its economic benefits.<|im_end|>\n<|im_start|>assistant\nCertainly, I'm here to assist you.\n\n<tool_call>\napi.edit_text(api.get_current_slide(), placeholder=1, new_text='Lowers greenhouse gas emissions, helping protect the environment', paragraph_index=1)\napi.edit_text(api.get_current_slide(), placeholder=1, new_text='Promotes energy independence, boosting local economies', paragraph_index=3)\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nEdit the first bullet point to focus on accessibility for rural areas and update the first subbullet point to highlight its cost-effectiveness.<|im_end|>\n<|im_start|>assistant\nI'll help you with that.\n\n<tool_call>\napi.edit_text(api.get_current_slide(), placeholder=1, new_text='Provides access to quality education for students in rural areas', paragraph_index=1)\napi.edit_text(api.get_current_slide(), placeholder=1, new_text='Offers a cost-effective alternative to traditional education', paragraph_index=2)\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nEdit the first bullet point to emphasize its long-term savings and update the second subbullet of the first bullet point to reflect its scalability for larger installations.<|im_end|>\n<|im_start|>assistant\nI'd be happy to help with that.\n\n<tool_call>\napi.edit_text(api.get_current_slide(), placeholder=1, new_text='Reduces electricity bills, leading to significant long-term savings', paragraph_index=1)\napi.edit_text(api.get_current_slide(), placeholder=1, new_text='Scalable to meet the demands of large industrial facilities', paragraph_index=3)\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nEdit the second bullet point to emphasize the conservation of cultural heritage and update the second subbullet point of the second bullet point to highlight community involvement in sustainable practices.<|im_end|>\n<|im_start|>assistant\nLet's get started with that.\n\n<tool_call>\napi.edit_text(api.get_current_slide(), placeholder=1, new_text='Supports the preservation of cultural and historical landmarks', paragraph_index=4)\napi.edit_text(api.get_current_slide(), placeholder=1, new_text='Engages local communities in adopting eco-friendly practices', paragraph_index=6)\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nEdit the first bullet point to include examples of real-world AI applications and update the second subbullet of the third bullet point to reflect its role in ethical considerations.<|im_end|>\n<|im_start|>assistant\nGot it, working on that now.\n\n<tool_call>\napi.edit_text(api.get_current_slide(), placeholder=1, new_text='Enhances productivity through automation, e.g., chatbots and predictive analytics', paragraph_index=1)\napi.edit_text(api.get_current_slide(), placeholder=1, new_text='Addresses fairness and transparency in AI decision-making', paragraph_index=2)\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nEdit the first subbullet point of the second bullet to emphasize its role in preventing chronic diseases and update the second bullet point to include its impact on mental health.\n<|im_end|>\n<|im_start|>assistant\nHere's how I can assist you.\n\n<tool_call>\napi.edit_text(api.get_current_slide(), placeholder=1, new_text='Rich in nutrients, reducing the risk of chronic illnesses like diabetes and heart disease', paragraph_index=5)\napi.edit_text(api.get_current_slide(), placeholder=1, new_text='Contributes to better mental well-being and reduces stress levels', paragraph_index=4)\n</tool_call><|im_end|>"
+    },
+    {
+      "text": "<|im_start|>human\nEdit the first bullet point to emphasize the significance of space exploration in advancing technology and update the first subbullet point to highlight its impact on communication systems.<|im_end|>\n<|im_start|>assistant\nGot it! Let me take care of this.\n\n<tool_call>\napi.edit_text(api.get_current_slide(), placeholder=1, new_text='Space exploration drives technological advancements, pushing innovation boundaries', paragraph_index=1)\napi.edit_text(api.get_current_slide(), placeholder=1, new_text='Improves communication systems, enabling global connectivity', paragraph_index=2)\n</tool_call><|im_end|>"
     }
   ]
 }

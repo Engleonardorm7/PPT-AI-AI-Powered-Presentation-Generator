@@ -59,6 +59,14 @@ API.py
 JSONformater.py
 Excelformater.py
 get-pip.py
-interface.py
+#interface.py
 tests.py
 /__pycache__
+
+*.safetensors
+PerfectModel/Qwen2.5_Finetuned2.0/
+PerfectModel/Qwen2.5_Finetuned3.0/
+Qwen2.5_Finetuned2.0/
+Qwen2.5_Base/
+venv/
+__pycache__/

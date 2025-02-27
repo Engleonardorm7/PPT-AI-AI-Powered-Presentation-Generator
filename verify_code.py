@@ -1,6 +1,6 @@
 import json
-from API_2 import PresentationAPI
-
+from API2 import PresentationAPI
+from luisImageGen import generate_image
 
 
 
@@ -46,12 +46,13 @@ class PresentationAPIExecutor:
 # Uso del código
 api = PresentationAPI('presentation.pptx')
 
-executor = PresentationAPIExecutor(api, 'formatted_data_new-2.json')
-inst = 56
+# executor = PresentationAPIExecutor(api, 'formatted_data_new-2.json')
+# inst = 201 #no hecho
 
 
-# #full
-# executor = PresentationAPIExecutor(api, 'formatted_new_FULLex.json')
-# inst = 4
+#full
+executor = PresentationAPIExecutor(api, 'formatted_new_FULLex.json')
+inst = 41#no hecho
 
 executor.execute_instruction(inst)
+
