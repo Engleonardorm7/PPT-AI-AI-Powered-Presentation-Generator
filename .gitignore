@@ -63,6 +63,9 @@ get-pip.py
 tests.py
 /__pycache__
 
+imagegen.py
+luisImageGen.py
+
 *.safetensors
 PerfectModel/Qwen2.5_Finetuned2.0/
 PerfectModel/Qwen2.5_Finetuned3.0/
