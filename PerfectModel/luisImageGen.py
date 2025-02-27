@@ -7,7 +7,7 @@ base_url = "https://stable-diffusion-1.ki-awz.iisys.de/sdapi/v1/txt2img"
 
 # Auth cookie 
 cookies = {
-    "_oauth2_proxy": "djIuWDI5aGRYUm9NbDl3Y205NGVTMDRNV0ZoTTJWbFpqTTBNRE5oTVdNME56TTBaakpsTkRkaFlqbG1OV05tWkEucy1WSTFIR1lYRG1QYTJaQzExMllsZw==|1739014816|VBZnpTT6lg_MymzdCa7GuwuuTpYWMY5jUv_KYWoVAh4="
+    "_oauth2_proxy": "dj"
 }
 
 
