@@ -63,6 +63,15 @@ get-pip.py
 tests.py
 /__pycache__
 
+interface2.py
+createscreenshots.py
+downloadbasemodel.py
+formatted_data.json
+modelstepbystep.py
+randomanswers.ipynb
+training3.ipynb
+UI.ipynb
+Untitled.ipynb
 
 Qwen2.5_Finetuned2.0/
 Qwen2.5_Base/
